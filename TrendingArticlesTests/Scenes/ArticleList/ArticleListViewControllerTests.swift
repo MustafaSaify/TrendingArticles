@@ -54,6 +54,18 @@ class ArticleListViewControllerTests: XCTestCase {
             reloadDataCalled = true
         }
     }
+    
+    class ArticleListRouterSpy: ArticleListRoutingLogic {
+        //Method call expectations
+        var routeToArticleDetailsCalled = false
+        var articleId: Double!
+
+        //Spied methods
+        func routeToArticleDetails(articleId: Double) {
+            routeToArticleDetailsCalled = true
+            self.articleId = articleId
+        }
+    }
       
     // MARK: - Tests
     func testShouldFetchArticlesOnViewLoad() {
@@ -123,6 +135,24 @@ class ArticleListViewControllerTests: XCTestCase {
         XCTAssertEqual(cell.titleLabel.text, "A")
         XCTAssertEqual(cell.authorLabel.text, "test author")
         XCTAssertEqual(cell.dateLabel.text, "test date")
+    }
+    
+    func testShouldCallRouteToArticleDetailsOnRouterWhenUserSelectsAnArticle() {
+        // Given
+        let routerSpy = ArticleListRouterSpy()
+        sut.router = routerSpy
+        let tableView = sut.tableView
+        sut.displayArticles(
+            viewModel: ArticleList.FetchArticles.ViewModel(articleDisplayModels: testDisplayArticles)
+        )
+        
+        // When
+        let indexPath = IndexPath(row: 0, section: 0)
+        sut.tableView(tableView!, didSelectRowAt: indexPath)
+        
+        // Then
+        XCTAssertTrue(routerSpy.routeToArticleDetailsCalled)
+        XCTAssertEqual(routerSpy.articleId, testDisplayArticles[indexPath.row].id)
     }
     
     func testShouldDisplayError() {

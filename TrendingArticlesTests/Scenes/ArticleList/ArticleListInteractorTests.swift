@@ -80,7 +80,7 @@ class ArticleListInteractorTests: XCTestCase {
         sut.worker = articlesWorkerSpy
 
         // When
-        let request = ArticleList.FetchArticles.Request(duration: .daily)
+        let request = ArticleList.FetchArticles.Request(duration: .day)
         sut.fetchArticles(request: request)
 
         // Then
@@ -100,7 +100,7 @@ class ArticleListInteractorTests: XCTestCase {
         sut.worker = articlesWorkerSpy
 
         // When
-        let request = ArticleList.FetchArticles.Request(duration: .daily)
+        let request = ArticleList.FetchArticles.Request(duration: .day)
         sut.fetchArticles(request: request)
 
         // Then
