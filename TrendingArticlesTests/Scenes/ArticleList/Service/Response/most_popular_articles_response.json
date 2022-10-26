@@ -1,0 +1,42 @@
+{
+  "status": "OK",
+  "copyright": "Copyright (c) 2022 The New York Times Company.  All Rights Reserved.",
+  "num_results": 20,
+  "results": [
+    {
+      "uri": "nyt://article/48d0e106-7f03-58be-a730-961f2fceab5d",
+      "url": "https://www.nytimes.com/2022/10/13/us/raleigh-shooting.html",
+      "id": 1,
+      "asset_id": 100000008581415,
+      "source": "New York Times",
+      "published_date": "2022-10-13",
+      "updated": "2022-10-14 21:13:08",
+      "section": "U.S.",
+      "subsection": "",
+      "nytdsection": "u.s.",
+      "adx_keywords": "Raleigh, NC, Shooting (Oct 13, 2022);Torres, Gabriel (d 2022);Raleigh (NC);North Carolina",
+      "column": null,
+      "byline": "By Emily",
+      "type": "Article",
+      "title": "Test title",
+      "abstract": "Test description",
+      "des_facet": [
+        "Raleigh, NC, Shooting (Oct 13, 2022)"
+      ],
+      "org_facet": [
+        
+      ],
+      "per_facet": [
+        "Torres, Gabriel (d 2022)"
+      ],
+      "geo_facet": [
+        "Raleigh (NC)",
+        "North Carolina"
+      ],
+      "media": [
+        
+      ],
+      "eta_id": 0
+    }
+  ]
+}
