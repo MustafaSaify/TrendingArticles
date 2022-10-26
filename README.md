@@ -48,6 +48,7 @@ The app is architected using the Clean Architecture VIP  (View Interactor Presen
 
 
 ## Future Enhancements:
+- Move the api_key to gitsecret.
 - An UI to allow the users to change the fetch articles duration (daily, weekly, monthly)
 - Recreate UI using SwiftUI.
 - Use async/await to make network calls.
