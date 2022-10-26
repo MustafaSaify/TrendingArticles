@@ -13,9 +13,9 @@ enum ArticleList {
         
         struct Request {
             enum Duration: Int {
-                case daily = 1
-                case weekly = 7
-                case monthly = 30
+                case day = 1
+                case week = 7
+                case month = 30
             }
             var duration: Duration
         }

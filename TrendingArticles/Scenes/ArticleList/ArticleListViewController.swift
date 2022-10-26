@@ -25,7 +25,7 @@ final class ArticleListViewController: UITableViewController {
     
     // TODO: To have a UI to select the duration the user wants to view the articles for.
     private var duration: ArticleList.FetchArticles.Request.Duration {
-        return .weekly
+        return .week
     }
     
     required init?(coder: NSCoder) {
